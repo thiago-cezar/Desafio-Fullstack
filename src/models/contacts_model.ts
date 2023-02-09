@@ -30,6 +30,7 @@ export class Contacts {
 
   @ManyToOne(() => User, {
     eager: true,
+    onDelete: "CASCADE",
   })
   user: User;
 }

@@ -8,5 +8,5 @@ export interface IContactRequest {
 export interface IContactUpdate {
   full_name?: string;
   email?: string;
-  telephone?: number;
+  telephone?: string;
 }

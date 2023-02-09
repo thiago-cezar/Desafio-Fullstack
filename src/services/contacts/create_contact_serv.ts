@@ -19,12 +19,14 @@ export const createContactServ = async ({
 
   if (!user) throw new AppError("User not found", 404);
 
-  const contact = {
+  const contact = contactsRepository.create({
     email: email,
     full_name: full_name,
     telephone: telephone,
     user: user,
-  };
+  });
 
-  return await contactsRepository.save(contact);
+  await contactsRepository.save(contact);
+
+  return contact;
 };

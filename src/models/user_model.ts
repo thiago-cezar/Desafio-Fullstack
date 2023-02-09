@@ -31,7 +31,7 @@ class User {
   updatedAt: Date;
 
   @OneToMany(() => Contacts, (Contacts) => Contacts.user)
-  contacts: string;
+  contacts: Contacts[];
 }
 
 export { User };

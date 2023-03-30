@@ -25,7 +25,7 @@ const ensureAuthMiddleware = (
     }
 
     req.user = {
-      id: decoded.id,
+      id: decoded.subject,
     };
   });
 

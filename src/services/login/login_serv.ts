@@ -25,9 +25,12 @@ export const loginServ = async ({
     throw new AppError("Invalid email or password", 403);
   }
 
-  const token = jwt.sign({}, process.env.SECRET_KEY as string, {
-    expiresIn: "1d",
-    subject: user.id,
-  });
+  const token = jwt.sign(
+    {
+      expiresIn: "1d",
+      subject: user.id,
+    },
+    process.env.SECRET_KEY as string
+  );
   return token;
 };

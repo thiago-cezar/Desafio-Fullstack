@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 import "express-async-errors";
 import "reflect-metadata";
@@ -9,6 +10,7 @@ import { userRoutes } from "./routes/user_routers";
 export const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use("/users", userRoutes);
 app.use("/login", loginRoutes);
 app.use("/user/contacts", contactsRoutes);

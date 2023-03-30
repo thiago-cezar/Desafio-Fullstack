@@ -36,6 +36,7 @@ $ npm install
 A API possui as seguintes rotas para o CRUD de usuários:
 
 - POST /users: Cadastra um novo usuário
+- POST /login: Faz o login do usuário
 - GET /users: Lista todos os usuários
 - PATCH /users/:id: Atualiza um usuário existente
 - DELETE /users/:id: Deleta um usuário existente
